@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA USSD Code Dialer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>South African USSD Dialer</h1>
+
+        <div class="form-group">
+            <label for="network">Select Network:</label>
+            <select id="network">
+                <option value="">-- Select Network --</option>
+                <option value="mtn">MTN</option>
+                <option value="vodacom">Vodacom</option>
+                <option value="telkom">Telkom</option>
+                <option value="cellc">Cell C</option>
+                <option value="rain">Rain</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ussd-code">USSD Code:</label>
+            <input type="text" id="ussd-code" placeholder="e.g. *136#">
+        </div>
+
+        <div class="quick-codes">
+            <h3>Quick Codes:</h3>
+            <div class="code-buttons" id="network-codes">
+                <!-- Buttons will be populated by JS based on network selection -->
+                <p>Select a network to see available codes</p>
+            </div>
+        </div>
+
+        <button id="dial-btn">Dial USSD Code</button>
+
+        <div class="simulation">
+            <div class="simulation-header">
+                <h3>USSD Simulation:</h3>
+                <div id="network-indicator"></div>
+            </div>
+            <div id="ussd-display">
+                <p>Welcome to SA USSD Dialer</p>
+                <p>Select a network and enter a code to begin</p>
+            </div>
+            <div id="ussd-input" class="hidden">
+                <input type="text" id="response-input" placeholder="Enter response">
+                <button id="send-response">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
